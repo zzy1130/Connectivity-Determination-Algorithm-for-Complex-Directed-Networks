@@ -16,11 +16,11 @@ tqdm==4.65.0
 ```
 ## Use Cases
 ### A. Adjacency matrix input
-In ``main.py``, replace the content of ``input_string`` variable at line 65 with your matrix and run:
+In ``main.py``, replace the content of ``input_string`` variable at line 65 with your matrix and run (the sample matrix has been given):
 ```
 python main.py
 ```
-
+After running, the connectivity result will be given.
 ### B. A single random network
 Example usage: 
 ```
@@ -46,7 +46,7 @@ Example usage:
 ```
 python erdos_renyi.py --num_nodes 1000 --start_p 0.01 --final_p 0.5 --sample_num 1000 --p_num 51
 ```
-num_nodes specifies the number of nodes inside the network, start_p is the initial value of p, final_p is the final value of p, sample_num specifies the number of random samples generated for each p value, and p_num is the number of p value in the experiment. 
+``num_nodes`` specifies the number of nodes inside the network, ``start_p`` is the initial value of p, ``final_p`` is the final value of p, ``sample_num`` specifies the number of random samples generated for each p value, and ``p_num is`` the number of p value in the experiment. 
 
 
 
