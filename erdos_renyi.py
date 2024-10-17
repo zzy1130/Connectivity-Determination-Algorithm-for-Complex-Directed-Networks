@@ -1,14 +1,11 @@
 import networkx as nx
 import numpy as np
-from itertools import combinations, product
 import argparse
 from tarjan import Graph
 from unilateral import is_unilaterally_connected
 from weak import to_undirected
 from tqdm import tqdm
 import csv
-import time
-import math
 
 def network_exp(start_p, final_p, sample_num, num_nodes, p_num):
     filename = f"{num_nodes}_{start_p}_erdos_renyi_network_results.csv"
@@ -19,7 +16,7 @@ def network_exp(start_p, final_p, sample_num, num_nodes, p_num):
         # Write the header
         writer.writeheader()
 
-        for i in np.arange(start_p, final_p + (final_p-start_p) / p_num, (final_p-start_p) / p_num):
+        for i in np.arange(start_p, final_p + (final_p-start_p) / (p_num-1), (final_p-start_p) / (p_num-1)):
             
             p_value = round(i, 4)
             print("For p with value of: ",p_value)
